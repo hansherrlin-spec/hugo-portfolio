@@ -1,36 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-light: var(--accent-light);
-  --color-muted: var(--muted);
-  --color-card: var(--card);
-  --color-border: var(--border-color);
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-:root {
-  --background: #faf9f6;
-  --foreground: #1a1a1a;
-  --accent: #2563eb;
-  --accent-light: #dbeafe;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --border-color: #e5e7eb;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #f5f5f5;
-    --accent: #60a5fa;
-    --accent-light: #1e3a5f;
-    --muted: #9ca3af;
-    --card: #141414;
-    --border-color: #2d2d2d;
-  }
+  --color-bg: #0a0a0a;
+  --color-bg-card: #141414;
+  --color-bg-elevated: #1a1a1a;
+  --color-accent: #dc2626;
+  --color-accent-soft: #7f1d1d;
+  --color-text: #f5f5f5;
+  --color-text-muted: #a3a3a3;
+  --color-border: #262626;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 * {
@@ -44,12 +23,12 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #0a0a0a;
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
 ::selection {
-  background: var(--accent);
+  background: #dc2626;
   color: white;
 }

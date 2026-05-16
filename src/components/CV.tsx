@@ -20,68 +20,72 @@ const typeLabels: Record<string, string> = {
 };
 
 const statusColors: Record<string, string> = {
-  Visas: "bg-green-100 text-green-700",
-  Kommande: "bg-blue-100 text-blue-700",
-  Inspelad: "bg-yellow-100 text-yellow-700",
-  Pågående: "bg-purple-100 text-purple-700",
+  Visas: "bg-green-950/50 text-green-400 border-green-900/50",
+  Kommande: "bg-red-950/50 text-red-400 border-red-900/50",
+  Inspelad: "bg-yellow-950/50 text-yellow-400 border-yellow-900/50",
+  Pågående: "bg-purple-950/50 text-purple-400 border-purple-900/50",
 };
 
 export default function CV() {
   return (
-    <section id="cv" className="py-24 px-6 bg-card">
+    <section id="cv" className="py-24 px-6 bg-bg-card">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-2">CV - Roller & Erfarenhet</h2>
-        <div className="w-16 h-1 bg-accent rounded mb-10" />
+        <p className="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2">
+          Erfarenhet
+        </p>
+        <h2 className="text-3xl font-bold mb-10 text-white">
+          Roller & Produktioner
+        </h2>
 
         {/* Roles */}
-        <div className="space-y-6">
+        <div className="space-y-5">
           {roles.map((role) => {
             const Icon = typeIcons[role.type] || Sparkles;
             return (
               <div
                 key={role.id}
-                className="border border-border rounded-xl p-6 hover:shadow-md transition-shadow bg-background"
+                className="border border-border rounded-xl p-6 hover:border-red-900/40 transition-colors bg-bg-elevated"
               >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div className="flex items-start gap-3">
-                    <div className="mt-1 p-2 rounded-lg bg-accent-light">
-                      <Icon size={18} className="text-accent" />
+                    <div className="mt-1 p-2 rounded-lg bg-red-950/50 border border-red-900/30">
+                      <Icon size={18} className="text-red-500" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold">{role.title}</h3>
-                      <p className="text-accent font-medium">{role.role}</p>
+                      <h3 className="text-xl font-semibold text-white">{role.title}</h3>
+                      <p className="text-red-400 font-medium">{role.role}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-muted">{role.year}</span>
+                    <span className="text-sm text-neutral-500">{role.year}</span>
                     <span
-                      className={`text-xs px-2 py-1 rounded-full font-medium ${statusColors[role.status] || ""}`}
+                      className={`text-xs px-2.5 py-1 rounded-full font-medium border ${statusColors[role.status] || ""}`}
                     >
                       {role.status}
                     </span>
                   </div>
                 </div>
 
-                <p className="mt-3 text-muted">{role.description}</p>
+                <p className="mt-3 text-neutral-400">{role.description}</p>
 
-                <div className="mt-3 flex flex-wrap gap-3 text-sm text-muted">
+                <div className="mt-3 flex flex-wrap gap-3 text-sm text-neutral-500">
                   {role.channel && (
                     <span>
-                      Kanal: <strong className="text-foreground">{role.channel}</strong>
+                      Kanal: <strong className="text-neutral-300">{role.channel}</strong>
                     </span>
                   )}
                   {role.director && (
                     <span>
-                      Regi: <strong className="text-foreground">{role.director}</strong>
+                      Regi: <strong className="text-neutral-300">{role.director}</strong>
                     </span>
                   )}
                   {role.production && (
                     <span>
                       Produktion:{" "}
-                      <strong className="text-foreground">{role.production}</strong>
+                      <strong className="text-neutral-300">{role.production}</strong>
                     </span>
                   )}
-                  <span className="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-xs">
+                  <span className="bg-neutral-800 px-2 py-0.5 rounded text-xs text-neutral-400">
                     {typeLabels[role.type]}
                   </span>
                 </div>
@@ -93,22 +97,22 @@ export default function CV() {
         {/* Training */}
         {training.length > 0 && (
           <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-6">Utbildning & Kurser</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white">Utbildning & Kurser</h3>
             <div className="space-y-4">
               {training.map((t, i) => (
                 <div
                   key={i}
-                  className="border border-border rounded-lg p-4 bg-background"
+                  className="border border-border rounded-lg p-4 bg-bg-elevated"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="font-semibold">{t.title}</h4>
-                      <p className="text-sm text-muted">{t.organization}</p>
+                      <h4 className="font-semibold text-white">{t.title}</h4>
+                      <p className="text-sm text-neutral-500">{t.organization}</p>
                     </div>
-                    <span className="text-sm text-muted">{t.year}</span>
+                    <span className="text-sm text-neutral-500">{t.year}</span>
                   </div>
                   {t.description && (
-                    <p className="mt-2 text-sm text-muted">{t.description}</p>
+                    <p className="mt-2 text-sm text-neutral-400">{t.description}</p>
                   )}
                 </div>
               ))}

@@ -5,10 +5,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border py-10 px-6 bg-card">
+    <footer className="border-t border-border py-10 px-6 bg-bg-card">
       <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-muted">
-          &copy; {year} {profile.name}. Alla rättigheter förbehållna.
+        <p className="text-sm text-neutral-600">
+          &copy; {year} {profile.name}
         </p>
 
         <div className="flex items-center gap-4">
@@ -17,7 +17,7 @@ export default function Footer() {
               href={profile.social.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-foreground transition-colors"
+              className="text-neutral-600 hover:text-red-500 transition-colors"
               aria-label="YouTube"
             >
               <Play size={20} />
@@ -28,7 +28,7 @@ export default function Footer() {
               href={profile.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-foreground transition-colors"
+              className="text-neutral-600 hover:text-red-500 transition-colors"
               aria-label="Instagram"
             >
               <ExternalLink size={20} />

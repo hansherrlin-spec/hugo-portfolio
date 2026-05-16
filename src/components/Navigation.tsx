@@ -15,9 +15,9 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border">
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="text-lg font-semibold tracking-tight">
+        <a href="#" className="text-lg font-bold tracking-tight text-text">
           Hugo Herrlin
         </a>
 
@@ -27,7 +27,7 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted hover:text-foreground transition-colors"
+              className="text-sm text-text-muted hover:text-accent transition-colors"
             >
               {link.label}
             </a>
@@ -36,7 +36,7 @@ export default function Navigation() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-text-muted"
           onClick={() => setOpen(!open)}
           aria-label="Meny"
         >
@@ -46,13 +46,13 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-border bg-bg">
           <div className="flex flex-col p-4 gap-3">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted hover:text-foreground py-2"
+                className="text-sm text-text-muted hover:text-accent py-2"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

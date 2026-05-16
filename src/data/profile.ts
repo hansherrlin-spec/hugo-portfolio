@@ -14,8 +14,8 @@ export const profile = {
   // --- Fysiska mått (viktigt för casting) ---
   physical: {
     height: "", // t.ex. "142 cm"
-    hairColor: "", // t.ex. "Blond"
-    eyeColor: "", // t.ex. "Blå"
+    hairColor: "Blond",
+    eyeColor: "Blå",
     shoeSize: "", // t.ex. "36"
     clothingSize: "", // t.ex. "152"
   },

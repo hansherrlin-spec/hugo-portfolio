@@ -5,60 +5,62 @@ export default function Contact() {
   return (
     <section id="kontakt" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-2">Kontakt</h2>
-        <div className="w-16 h-1 bg-accent rounded mb-4" />
-        <p className="text-muted mb-10">
+        <p className="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2">
+          Kontakt
+        </p>
+        <h2 className="text-3xl font-bold mb-2 text-white">Boka Hugo</h2>
+        <p className="text-neutral-500 mb-10">
           Intresserad av att boka Hugo? Kontakta oss via mejl. All kontakt sker
           genom Hugos förälder/vårdnadshavare.
         </p>
 
-        <div className="border border-border rounded-2xl p-8 bg-card">
+        <div className="border border-border rounded-2xl p-8 bg-bg-card">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-full bg-accent-light flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-red-950/50 border border-red-900/30 flex items-center justify-center">
               <span className="text-xl">👋</span>
             </div>
             <div>
-              <p className="font-semibold">{profile.contact.guardianName}</p>
-              <p className="text-sm text-muted">Förälder / Kontaktperson</p>
+              <p className="font-semibold text-white">{profile.contact.guardianName}</p>
+              <p className="text-sm text-neutral-500">Förälder / Kontaktperson</p>
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <a
               href={`mailto:${profile.contact.email}`}
-              className="flex items-center gap-3 p-4 rounded-xl border border-border hover:bg-accent-light/50 transition-colors group"
+              className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-red-900/40 transition-colors group bg-bg-elevated"
             >
               <Mail
                 size={20}
-                className="text-accent group-hover:scale-110 transition-transform"
+                className="text-red-500 group-hover:scale-110 transition-transform"
               />
               <div>
-                <p className="text-sm text-muted">E-post</p>
-                <p className="font-medium">{profile.contact.email}</p>
+                <p className="text-xs text-neutral-500">E-post</p>
+                <p className="font-medium text-white">{profile.contact.email}</p>
               </div>
             </a>
 
             {profile.contact.phone && (
               <a
                 href={`tel:${profile.contact.phone}`}
-                className="flex items-center gap-3 p-4 rounded-xl border border-border hover:bg-accent-light/50 transition-colors group"
+                className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-red-900/40 transition-colors group bg-bg-elevated"
               >
                 <Phone
                   size={20}
-                  className="text-accent group-hover:scale-110 transition-transform"
+                  className="text-red-500 group-hover:scale-110 transition-transform"
                 />
                 <div>
-                  <p className="text-sm text-muted">Telefon</p>
-                  <p className="font-medium">{profile.contact.phone}</p>
+                  <p className="text-xs text-neutral-500">Telefon</p>
+                  <p className="font-medium text-white">{profile.contact.phone}</p>
                 </div>
               </a>
             )}
 
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-border">
-              <MapPin size={20} className="text-accent" />
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-border bg-bg-elevated">
+              <MapPin size={20} className="text-red-500" />
               <div>
-                <p className="text-sm text-muted">Baserad i</p>
-                <p className="font-medium">{profile.contact.city}</p>
+                <p className="text-xs text-neutral-500">Baserad i</p>
+                <p className="font-medium text-white">{profile.contact.city}</p>
               </div>
             </div>
           </div>
