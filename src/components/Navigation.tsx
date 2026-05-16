@@ -7,7 +7,6 @@ const links = [
   { href: "#om", label: "Om Hugo" },
   { href: "#cv", label: "CV" },
   { href: "#media", label: "Media" },
-  { href: "#profil", label: "Casting" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
@@ -15,9 +14,9 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/50">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="text-lg font-bold tracking-tight text-white">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/90 backdrop-blur-sm">
+      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
+        <a href="#" className="text-sm font-semibold uppercase tracking-widest text-white">
           Hugo Herrlin
         </a>
 
@@ -26,7 +25,7 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
+              className="text-xs uppercase tracking-wider text-neutral-500 hover:text-white transition-colors"
             >
               {link.label}
             </a>
@@ -38,18 +37,18 @@ export default function Navigation() {
           onClick={() => setOpen(!open)}
           aria-label="Meny"
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-neutral-800 bg-neutral-950">
-          <div className="flex flex-col p-4 gap-3">
+        <div className="md:hidden bg-neutral-950 border-t border-neutral-900">
+          <div className="flex flex-col p-6 gap-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-neutral-400 hover:text-red-500 py-2"
+                className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
