@@ -44,7 +44,7 @@ Hugo är nyfiken, lyhörd och tar instruktioner snabbt. Han trivs på set och ha
 
   // --- YouTube och sociala medier ---
   social: {
-    youtube: "", // Lägg till YouTube-kanal URL
+    youtube: "https://www.youtube.com/@sketchspark2.0",
     instagram: "", // Om det finns
     imdb: "", // Om det finns
   },
