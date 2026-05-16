@@ -37,10 +37,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body
-        className="min-h-full bg-neutral-950 text-neutral-100"
-        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}
-      >
+      <body>
         {children}
       </body>
     </html>

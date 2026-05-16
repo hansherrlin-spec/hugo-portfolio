@@ -22,52 +22,62 @@ export default function VideosPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-14">
-        <section className="py-16 sm:py-24 px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white mb-4 leading-none">
+      <main style={{ paddingTop: 56 }}>
+        <section className="site-section">
+          <div className="site-container-wide">
+            <h1 style={{
+              fontSize: "clamp(36px, 8vw, 56px)",
+              fontWeight: 900,
+              textTransform: "uppercase" as const,
+              letterSpacing: "-0.02em",
+              color: "#fff",
+              lineHeight: 1,
+              marginBottom: 16,
+            }}>
               Videos
             </h1>
-            <div className="w-12 h-px bg-red-600 mb-6" />
-            <p className="text-sm sm:text-base text-neutral-400 mb-12 sm:mb-16 max-w-lg">
+            <div style={{ width: 48, height: 2, background: "#dc2626", marginBottom: 20 }} />
+            <p className="text-body" style={{ marginBottom: 48, maxWidth: 480 }}>
               Klipp och showreel från Hugos produktioner och YouTube-kanal.
             </p>
 
-            {/* YouTube channel link */}
             {profile.social.youtube && (
               <a
                 href={profile.social.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 mb-12 sm:mb-16 py-3 px-5 border border-neutral-800 rounded-sm hover:border-red-900/50 transition-colors group"
+                className="media-row"
+                style={{ marginBottom: 48 }}
               >
-                <Play size={18} className="text-red-500" />
+                <Play size={18} style={{ color: "#ef4444", flexShrink: 0 }} />
                 <div>
-                  <p className="text-sm font-medium text-white group-hover:text-red-400 transition-colors">
-                    SketchSpark - YouTube
-                  </p>
-                  <p className="text-xs text-neutral-500">
-                    Besök Hugos YouTube-kanal
-                  </p>
+                  <p className="media-title">SketchSpark - YouTube</p>
+                  <p className="text-small">Besök Hugos YouTube-kanal</p>
                 </div>
               </a>
             )}
 
-            {/* Video grid */}
             {youtubeVideos.length > 0 ? (
-              <div className="space-y-8 sm:space-y-12">
+              <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
                 {youtubeVideos.map((item) => {
                   const videoId = getYouTubeId(item.url);
                   return (
                     <div key={item.id}>
                       {videoId ? (
-                        <div className="aspect-video bg-neutral-900 overflow-hidden">
+                        <div style={{ position: "relative", paddingBottom: "56.25%", background: "#171717" }}>
                           <iframe
                             src={`https://www.youtube.com/embed/${videoId}`}
                             title={item.title}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
-                            className="w-full h-full"
+                            style={{
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              width: "100%",
+                              height: "100%",
+                              border: "none",
+                            }}
                           />
                         </div>
                       ) : (
@@ -75,17 +85,23 @@ export default function VideosPage() {
                           href={item.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block aspect-video bg-neutral-900 flex items-center justify-center hover:bg-neutral-800 transition-colors"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            aspectRatio: "16/9",
+                            background: "#171717",
+                          }}
                         >
-                          <Play size={48} className="text-neutral-600" />
+                          <Play size={48} style={{ color: "#525252" }} />
                         </a>
                       )}
-                      <div className="mt-3 sm:mt-4">
-                        <h2 className="text-base sm:text-lg font-semibold text-white">
+                      <div style={{ marginTop: 12 }}>
+                        <h2 style={{ fontSize: 17, fontWeight: 600, color: "#fff", margin: 0 }}>
                           {item.title}
                         </h2>
                         {item.description && (
-                          <p className="text-sm text-neutral-500 mt-1">
+                          <p className="text-small" style={{ marginTop: 4 }}>
                             {item.description}
                           </p>
                         )}
@@ -95,12 +111,14 @@ export default function VideosPage() {
                 })}
               </div>
             ) : (
-              <div className="py-16 sm:py-24 text-center border border-dashed border-neutral-800">
-                <Video size={40} className="mx-auto text-neutral-700 mb-4" />
-                <p className="text-neutral-400 mb-2">
-                  Klipp kommer snart
-                </p>
-                <p className="text-sm text-neutral-600 max-w-sm mx-auto">
+              <div style={{
+                padding: "64px 20px",
+                textAlign: "center",
+                border: "1px dashed #262626",
+              }}>
+                <Video size={36} style={{ color: "#404040", margin: "0 auto 16px" }} />
+                <p style={{ color: "#a3a3a3", marginBottom: 8 }}>Klipp kommer snart</p>
+                <p className="text-small" style={{ maxWidth: 320, margin: "0 auto" }}>
                   Här kommer vi lägga upp showreel och klipp från Hugos produktioner efter hand.
                 </p>
               </div>

@@ -15,49 +15,41 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/90 backdrop-blur-sm">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
-        <Link href="/" className="text-sm font-semibold uppercase tracking-widest text-white">
+    <nav className="site-nav">
+      <div className="site-nav-inner">
+        <Link href="/" className="nav-brand">
           Hugo Herrlin
         </Link>
 
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+        <div className="nav-links">
           {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-xs uppercase tracking-wider text-neutral-500 hover:text-white transition-colors"
-            >
+            <Link key={link.href} href={link.href} className="nav-link">
               {link.label}
             </Link>
           ))}
         </div>
 
         <button
-          className="md:hidden p-2 text-neutral-400"
+          className="mobile-menu-btn"
           onClick={() => setOpen(!open)}
           aria-label="Meny"
         >
-          {open ? <X size={18} /> : <Menu size={18} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
-      {open && (
-        <div className="md:hidden bg-neutral-950 border-t border-neutral-900">
-          <div className="flex flex-col p-6 gap-5">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <div className={`mobile-nav ${open ? "open" : ""}`}>
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="nav-link"
+            onClick={() => setOpen(false)}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 }
