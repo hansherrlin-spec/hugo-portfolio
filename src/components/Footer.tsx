@@ -5,11 +5,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-16 px-6">
+    <footer className="py-12 sm:py-16 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
-        {/* Social links */}
         {(profile.social.youtube || profile.social.instagram) && (
-          <div className="flex items-center justify-center gap-6 mb-10">
+          <div className="flex items-center justify-center gap-6 mb-8 sm:mb-10">
             {profile.social.youtube && (
               <a
                 href={profile.social.youtube}
@@ -35,7 +34,7 @@ export default function Footer() {
           </div>
         )}
 
-        <div className="border-t border-neutral-900 pt-8 text-center">
+        <div className="border-t border-neutral-900 pt-6 sm:pt-8 text-center">
           <p className="text-xs text-neutral-700">
             &copy; {year} {profile.name}
           </p>
