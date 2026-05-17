@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import PasswordGate from "@/components/PasswordGate";
 
 export const metadata: Metadata = {
   title: "Hugo Herrlin - Ung Skådespelare",
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sv" className="h-full antialiased">
+    <html lang="sv">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -38,7 +39,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        <PasswordGate>{children}</PasswordGate>
       </body>
     </html>
   );

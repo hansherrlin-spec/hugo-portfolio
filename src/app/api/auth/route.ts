@@ -1,0 +1,13 @@
+import { NextRequest, NextResponse } from "next/server";
+
+const SITE_PASSWORD = process.env.SITE_PASSWORD || "Hugo1234";
+
+export async function POST(req: NextRequest) {
+  const { password } = await req.json();
+
+  if (password === SITE_PASSWORD) {
+    return NextResponse.json({ ok: true });
+  }
+
+  return NextResponse.json({ ok: false }, { status: 401 });
+}

@@ -322,3 +322,87 @@ body {
 .footer-social a:hover {
   color: #ef4444;
 }
+
+/* Password gate */
+.password-gate {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #0a0a0a;
+}
+
+.password-card {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.password-name {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.password-subtitle {
+  font-size: 13px;
+  color: #737373;
+  margin-bottom: 32px;
+}
+
+.password-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #171717;
+  border: 1px solid #262626;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.password-input:focus {
+  border-color: #dc2626;
+}
+
+.password-input::placeholder {
+  color: #525252;
+}
+
+.password-error {
+  font-size: 13px;
+  color: #ef4444;
+  margin-top: 8px;
+}
+
+.password-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.password-btn:hover {
+  background: #b91c1c;
+}
+
+.password-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
