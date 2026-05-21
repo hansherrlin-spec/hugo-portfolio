@@ -16,7 +16,6 @@ export default function Media() {
             controls
             preload="metadata"
             playsInline
-            poster="/hero-hugo.jpg"
             style={{
               width: "100%",
               maxWidth: 280,
