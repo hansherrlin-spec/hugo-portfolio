@@ -280,7 +280,7 @@ body {
 
 .hero-photo {
   width: clamp(280px, 80vw, 380px);
-  aspect-ratio: 732 / 1172;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   margin: 0 auto;
 }
