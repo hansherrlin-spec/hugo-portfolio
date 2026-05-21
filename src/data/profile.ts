@@ -38,7 +38,7 @@ export const profile = {
   skills: [
     "Improvisation",
     "Breakdance",
-    "Sång",
+    "Rap",
     "Teckning & konst",
     "Gaming",
     "Japanska (nybörjare)",
@@ -48,11 +48,11 @@ export const profile = {
   ],
 
   // --- Om Hugo (kort bio) ---
-  bio: `Jag heter Hugo och drömmer om att bli skådespelare. Jag har fått vara med i några produktioner och tycker att det är både roligt och lärorikt att få prova på.
+  bio: `Jag heter Hugo och är en pojke på 11 jordsnurr. Jag drömmer om att bli skådespelare. Jag har fått vara med i några produktioner och tycker att det är både roligt och lärorikt att få prova på.
 
-Under 2026 var jag med i "Jakten på sommarskuggan" och fick spela mot den erfarna skådespelaren Laszlo. Jag har också varit statist i SVT-produktionen "Vild" som sänds 2027.
+Under 2026 var jag med i "Sommarlov" och fick spela mot Laszlo. Jag har också varit statist i SVT-produktionen "Vild" som sänds 2027.
 
-Jag lyssnar gärna, tar instruktioner snabbt och lär mig mina repliker fort. På fritiden breakdansar jag, tecknar, gamar och lär mig japanska. Jag har mycket kvar att lära, men är nyfiken och vill gärna fortsätta växa som skådespelare.`,
+Jag lyssnar gärna, tar instruktioner snabbt och lär mig mina repliker fort. På fritiden breakdansar jag, tecknar, gamar och lär mig japanska. Jag är inte bäst men försöker ta åt mig av de bästa, vill gärna fortsätta växa som skådespelare.`,
 
   // --- YouTube och sociala medier ---
   social: {
@@ -79,15 +79,15 @@ export interface Role {
 
 export const roles: Role[] = [
   {
-    id: "jakten-sommarskuggan",
-    title: "Jakten på sommarskuggan",
+    id: "sommarlov",
+    title: "Sommarlov",
     role: "Bärande roll (mot Laszlo)",
     type: "tv",
     year: 2026,
     production: "", // TODO: produktionsbolag (om känt)
     channel: "", // TODO: kanal/plattform (om känt)
     description:
-      "Hel inspelningsdag i en av de bärande rollerna. Spelade mot den erfarna skådespelaren Laszlo i denna sommarlovsproduktion.",
+      "Hel inspelningsdag i en av de bärande rollerna. Spelade mot Laszlo.",
     status: "Kommande",
     featured: true,
   },
