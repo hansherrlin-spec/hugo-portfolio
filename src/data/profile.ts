@@ -28,9 +28,9 @@ export const profile = {
 
   // --- Kontakt (via föräldrar) ---
   contact: {
-    guardianName: "Hans Herrlin",
-    email: "hans.herrlin@gmail.com",
-    phone: "070-597 63 78",
+    guardianName: "Louise Herrlin",
+    email: "louise.herrlin@gmail.com",
+    phone: "070-991 65 39",
     city: "Sverige",
   },
 
