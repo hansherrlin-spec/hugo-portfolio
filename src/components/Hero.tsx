@@ -16,8 +16,6 @@ export default function Hero() {
 
       <div className="hero-line" />
 
-      <p className="hero-subtitle">Skådespelare</p>
-
       <div className="hero-photo">
         {imgError ? (
           <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>

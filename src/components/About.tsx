@@ -28,32 +28,6 @@ export default function About() {
             <p className="text-body">{profile.skills.join(" / ")}</p>
           </div>
         )}
-
-        <div style={{ marginTop: 40, paddingTop: 40, borderTop: "1px solid #171717" }}>
-          <p className="text-label" style={{ marginBottom: 16 }}>Detaljer</p>
-          <div className="details-grid">
-            <div>
-              <p className="text-label" style={{ marginBottom: 4 }}>Baserad i</p>
-              <p style={{ color: "#d4d4d4", fontSize: 14 }}>{profile.location}</p>
-            </div>
-            <div>
-              <p className="text-label" style={{ marginBottom: 4 }}>Språk</p>
-              <p style={{ color: "#d4d4d4", fontSize: 14 }}>{profile.languages.join(", ")}</p>
-            </div>
-            {profile.physical.hairColor && (
-              <div>
-                <p className="text-label" style={{ marginBottom: 4 }}>Hårfärg</p>
-                <p style={{ color: "#d4d4d4", fontSize: 14 }}>{profile.physical.hairColor}</p>
-              </div>
-            )}
-            {profile.physical.eyeColor && (
-              <div>
-                <p className="text-label" style={{ marginBottom: 4 }}>Ögonfärg</p>
-                <p style={{ color: "#d4d4d4", fontSize: 14 }}>{profile.physical.eyeColor}</p>
-              </div>
-            )}
-          </div>
-        </div>
       </div>
     </section>
   );

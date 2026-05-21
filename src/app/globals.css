@@ -275,15 +275,7 @@ body {
   width: 48px;
   height: 2px;
   background: #dc2626;
-  margin: 0 auto 16px;
-}
-
-.hero-subtitle {
-  font-size: clamp(14px, 2.5vw, 20px);
-  color: #a3a3a3;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  margin-bottom: clamp(32px, 6vw, 56px);
+  margin: 0 auto clamp(32px, 6vw, 56px);
 }
 
 .hero-photo {

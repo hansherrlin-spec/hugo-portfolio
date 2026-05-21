@@ -37,7 +37,6 @@ export const profile = {
   // --- Speciella färdigheter ---
   skills: [
     "Improvisation",
-    "Simning",
     "Breakdance",
     "Sång",
     "Teckning & konst",
@@ -53,7 +52,7 @@ export const profile = {
 
 Under 2026 var jag med i "Jakten på sommarskuggan" och fick spela mot den erfarna skådespelaren Laszlo. Jag har också varit statist i SVT-produktionen "Vild" som sänds 2027.
 
-Jag lyssnar gärna, tar instruktioner snabbt och lär mig mina repliker fort. På fritiden breakdansar jag, tecknar, simmar och lär mig japanska. Jag har mycket kvar att lära, men är nyfiken och vill gärna fortsätta växa som skådespelare.`,
+Jag lyssnar gärna, tar instruktioner snabbt och lär mig mina repliker fort. På fritiden breakdansar jag, tecknar, gamar och lär mig japanska. Jag har mycket kvar att lära, men är nyfiken och vill gärna fortsätta växa som skådespelare.`,
 
   // --- YouTube och sociala medier ---
   social: {
