@@ -17,7 +17,12 @@ export default function Media() {
             preload="metadata"
             playsInline
             poster="/hero-hugo.jpg"
-            style={{ width: "100%", background: "#171717", display: "block" }}
+            style={{
+              width: "100%",
+              maxWidth: 280,
+              background: "#171717",
+              display: "block",
+            }}
           >
             <source src="/hugo-selftape.mp4" type="video/mp4" />
             Din webbläsare stöder inte HTML5-video.
