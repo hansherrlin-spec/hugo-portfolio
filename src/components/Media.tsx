@@ -20,7 +20,7 @@ export default function Media() {
             <Play size={18} style={{ color: "#ef4444", flexShrink: 0 }} />
             <div>
               <p className="media-title">SketchSpark - YouTube</p>
-              <p className="text-small">Hugos YouTube-kanal med videos och sketcher</p>
+              <p className="text-small">Hugos YouTube-kanal med teckningar</p>
             </div>
           </a>
         )}
@@ -29,7 +29,7 @@ export default function Media() {
           <Play size={18} style={{ color: "#525252", flexShrink: 0 }} />
           <div>
             <p className="media-title">Klipp och videos</p>
-            <p className="text-small">Se Hugos showreel och klipp från produktioner</p>
+            <p className="text-small">Vi inväntar klipp från Hugos första inspelningar</p>
           </div>
         </Link>
       </div>

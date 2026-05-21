@@ -38,7 +38,7 @@ export default function VideosPage() {
             </h1>
             <div style={{ width: 48, height: 2, background: "#dc2626", marginBottom: 20 }} />
             <p className="text-body" style={{ marginBottom: 48, maxWidth: 480 }}>
-              Klipp och showreel från Hugos produktioner och YouTube-kanal.
+              Klipp och showreel från Hugos produktioner.
             </p>
 
             {profile.social.youtube && (
@@ -52,7 +52,7 @@ export default function VideosPage() {
                 <Play size={18} style={{ color: "#ef4444", flexShrink: 0 }} />
                 <div>
                   <p className="media-title">SketchSpark - YouTube</p>
-                  <p className="text-small">Besök Hugos YouTube-kanal</p>
+                  <p className="text-small">Hugos YouTube-kanal med teckningar</p>
                 </div>
               </a>
             )}
@@ -119,7 +119,7 @@ export default function VideosPage() {
                 <Video size={36} style={{ color: "#404040", margin: "0 auto 16px" }} />
                 <p style={{ color: "#a3a3a3", marginBottom: 8 }}>Klipp kommer snart</p>
                 <p className="text-small" style={{ maxWidth: 320, margin: "0 auto" }}>
-                  Här kommer vi lägga upp showreel och klipp från Hugos produktioner efter hand.
+                  Vi inväntar klipp från Hugos första inspelningar och publicerar dem här efter hand.
                 </p>
               </div>
             )}
