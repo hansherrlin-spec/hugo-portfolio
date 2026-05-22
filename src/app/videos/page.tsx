@@ -72,6 +72,7 @@ export default function VideosPage() {
                           controls
                           preload="metadata"
                           playsInline
+                          poster={item.thumbnail}
                           style={{
                             width: "100%",
                             maxWidth: 360,

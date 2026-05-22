@@ -122,6 +122,7 @@ export const media: MediaItem[] = [
     type: "video",
     title: "Selftape",
     url: "/hugo-selftape.mp4",
+    thumbnail: "/hugo-selftape-poster.jpg",
     description: "Hugos selftape.",
   },
   {
@@ -129,6 +130,7 @@ export const media: MediaItem[] = [
     type: "video",
     title: "Scen – telefonsamtal",
     url: "/hugo-scene-telefonsamtal.mp4",
+    thumbnail: "/hugo-scene-telefonsamtal-poster.jpg",
     description: "Hugo spelar en scen med ett telefonsamtal.",
   },
 ];
