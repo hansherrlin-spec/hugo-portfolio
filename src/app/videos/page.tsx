@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { profile, media } from "@/data/profile";
+import { profile, media, roles } from "@/data/profile";
 import { Play, Video } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -124,6 +124,39 @@ export default function VideosPage() {
                 <p className="text-small" style={{ maxWidth: 320, margin: "0 auto" }}>
                   Vi inväntar klipp från Hugos första inspelningar och publicerar dem här efter hand.
                 </p>
+              </div>
+            )}
+
+            {roles.length > 0 && (
+              <div style={{ marginTop: 64 }}>
+                <p className="text-label" style={{ marginBottom: 20 }}>
+                  Kommande klipp
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                  {roles.map((role) => (
+                    <div
+                      key={role.id}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 16,
+                        padding: "20px",
+                        border: "1px dashed #262626",
+                      }}
+                    >
+                      <Video size={22} style={{ color: "#404040", flexShrink: 0 }} />
+                      <div style={{ minWidth: 0 }}>
+                        <p style={{ fontSize: 15, fontWeight: 600, color: "#fff", margin: 0 }}>
+                          {role.title}
+                        </p>
+                        <p className="text-small" style={{ marginTop: 2 }}>
+                          Klipp inväntas
+                          {role.channel ? ` · ${role.channel}` : ""} · {role.year}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
