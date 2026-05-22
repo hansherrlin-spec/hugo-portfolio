@@ -10,24 +10,6 @@ export default function Media() {
       <div className="site-container">
         <p className="section-label">Media</p>
 
-        <div style={{ marginBottom: 32 }}>
-          <p className="text-label" style={{ marginBottom: 12 }}>Selftape</p>
-          <video
-            controls
-            preload="metadata"
-            playsInline
-            style={{
-              width: "100%",
-              maxWidth: 280,
-              background: "#171717",
-              display: "block",
-            }}
-          >
-            <source src="/hugo-selftape.mp4" type="video/mp4" />
-            Din webbläsare stöder inte HTML5-video.
-          </video>
-        </div>
-
         {hasYouTube && (
           <a
             href={profile.social.youtube}
