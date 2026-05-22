@@ -47,7 +47,7 @@ export default function Media() {
           <Play size={18} style={{ color: "#525252", flexShrink: 0 }} />
           <div>
             <p className="media-title">Klipp och videos</p>
-            <p className="text-small">Vi inväntar klipp från Hugos första inspelningar</p>
+            <p className="text-small">Se Hugos selftape och scenklipp</p>
           </div>
         </Link>
       </div>

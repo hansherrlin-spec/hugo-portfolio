@@ -117,14 +117,20 @@ export interface MediaItem {
 }
 
 export const media: MediaItem[] = [
-  // (Valfritt) Lägg till showreel/klipp här senare, t.ex:
-  // {
-  //   id: "showreel-2026",
-  //   type: "youtube",
-  //   title: "Hugo Herrlin - Showreel 2026",
-  //   url: "https://youtube.com/watch?v=XXXXX",
-  //   description: "Klipp från Hugos produktioner"
-  // },
+  {
+    id: "selftape",
+    type: "video",
+    title: "Selftape",
+    url: "/hugo-selftape.mp4",
+    description: "Hugos selftape.",
+  },
+  {
+    id: "scen-telefonsamtal",
+    type: "video",
+    title: "Scen – telefonsamtal",
+    url: "/hugo-scene-telefonsamtal.mp4",
+    description: "Hugo spelar en scen med ett telefonsamtal.",
+  },
 ];
 
 // --- Utbildning och kurser ---

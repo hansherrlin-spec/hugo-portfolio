@@ -17,7 +17,9 @@ function getYouTubeId(url: string): string | null {
 }
 
 export default function VideosPage() {
-  const youtubeVideos = media.filter((item) => item.type === "youtube");
+  const videos = media.filter(
+    (item) => item.type === "video" || item.type === "youtube"
+  );
 
   return (
     <>
@@ -38,7 +40,7 @@ export default function VideosPage() {
             </h1>
             <div style={{ width: 48, height: 2, background: "#dc2626", marginBottom: 20 }} />
             <p className="text-body" style={{ marginBottom: 48, maxWidth: 480 }}>
-              Klipp och showreel från Hugos produktioner.
+              Hugos selftape och scenklipp.
             </p>
 
             {profile.social.youtube && (
@@ -57,13 +59,14 @@ export default function VideosPage() {
               </a>
             )}
 
-            {youtubeVideos.length > 0 ? (
+            {videos.length > 0 ? (
               <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-                {youtubeVideos.map((item) => {
-                  const videoId = getYouTubeId(item.url);
+                {videos.map((item) => {
+                  const videoId =
+                    item.type === "youtube" ? getYouTubeId(item.url) : null;
                   return (
                     <div key={item.id}>
-                      {videoId ? (
+                      {item.type === "youtube" ? (
                         <div style={{ position: "relative", paddingBottom: "56.25%", background: "#171717" }}>
                           <iframe
                             src={`https://www.youtube.com/embed/${videoId}`}
@@ -81,20 +84,20 @@ export default function VideosPage() {
                           />
                         </div>
                       ) : (
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <video
+                          controls
+                          preload="metadata"
+                          playsInline
                           style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            aspectRatio: "16/9",
+                            width: "100%",
+                            maxWidth: 360,
                             background: "#171717",
+                            display: "block",
                           }}
                         >
-                          <Play size={48} style={{ color: "#525252" }} />
-                        </a>
+                          <source src={item.url} type="video/mp4" />
+                          Din webbläsare stöder inte HTML5-video.
+                        </video>
                       )}
                       <div style={{ marginTop: 12 }}>
                         <h2 style={{ fontSize: 17, fontWeight: 600, color: "#fff", margin: 0 }}>
