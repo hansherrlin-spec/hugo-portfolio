@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { profile, media, roles } from "@/data/profile";
+import { media, roles } from "@/data/profile";
 import { Play, Video } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -42,22 +42,6 @@ export default function VideosPage() {
             <p className="text-body" style={{ marginBottom: 48, maxWidth: 480 }}>
               Hugos selftape och scenklipp.
             </p>
-
-            {profile.social.youtube && (
-              <a
-                href={profile.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="media-row"
-                style={{ marginBottom: 48 }}
-              >
-                <Play size={18} style={{ color: "#ef4444", flexShrink: 0 }} />
-                <div>
-                  <p className="media-title">SketchSpark - YouTube</p>
-                  <p className="text-small">Hugos YouTube-kanal med teckningar</p>
-                </div>
-              </a>
-            )}
 
             {videos.length > 0 ? (
               <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>

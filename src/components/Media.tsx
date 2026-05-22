@@ -10,6 +10,14 @@ export default function Media() {
       <div className="site-container">
         <p className="section-label">Media</p>
 
+        <Link href="/videos" className="media-row">
+          <Play size={18} style={{ color: "#ef4444", flexShrink: 0 }} />
+          <div>
+            <p className="media-title">Klipp och videos</p>
+            <p className="text-small">Se Hugos selftape och scenklipp</p>
+          </div>
+        </Link>
+
         {hasYouTube && (
           <a
             href={profile.social.youtube}
@@ -17,21 +25,13 @@ export default function Media() {
             rel="noopener noreferrer"
             className="media-row"
           >
-            <Play size={18} style={{ color: "#ef4444", flexShrink: 0 }} />
+            <Play size={18} style={{ color: "#525252", flexShrink: 0 }} />
             <div>
               <p className="media-title">SketchSpark - YouTube</p>
               <p className="text-small">Hugos YouTube-kanal med teckningar</p>
             </div>
           </a>
         )}
-
-        <Link href="/videos" className="media-row">
-          <Play size={18} style={{ color: "#525252", flexShrink: 0 }} />
-          <div>
-            <p className="media-title">Klipp och videos</p>
-            <p className="text-small">Se Hugos selftape och scenklipp</p>
-          </div>
-        </Link>
       </div>
     </section>
   );
